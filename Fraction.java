@@ -26,14 +26,14 @@ class Fraction {
     public int getDenom() {
         return this.denominator;
     }
-    public String toString (Fraction fraction) {
+    public String toString () {
         String returnString = new String();
-        returnString = returnString + fraction.getNum() + "/" + fraction.getDenom();
+        returnString = returnString + this.numerator + "/" + this.denominator;
         return returnString;
     }
-    public double toDouble (Fraction fraction) {
-        double i = (double) fraction.getNum();
-        double i2 = (double) fraction.getDenom();
+    public double toDouble () {
+        double i = (double) this.numerator;
+        double i2 = (double) this.denominator;
         return (i/i2);
     }
    public void reduce () {
