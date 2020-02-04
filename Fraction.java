@@ -6,19 +6,31 @@ class Fraction {
         denominator = 2;
     }
     public Fraction (int numerator, int denominator) {
-        numerator = numerator;
+        this.numerator = numerator;
         if (denominator == 0) denominator = 1;
-        else if (denominator != 0) denominator = denominator;
+        this.denominator = denominator;
+        if (denominator < 0 && numerator < 0) {
+            this.denominator *= -1;
+            this.numerator *= -1;
+        }
     }
     public Fraction (String fraction) {
         numerator = Integer.parseInt(fraction.substring(0, 1));
         int x = Integer.parseInt(fraction.substring(2, 3));
         if (x == 0) denominator = 1;
         else denominator = x;
+        if (denominator < 0 && numerator < 0) {
+            denominator *= -1;
+            numerator *= -1;
+        }
     }
     public Fraction (Fraction fraction) {
         numerator = fraction.numerator;
         denominator = fraction.denominator;
+        if (denominator < 0 && numerator < 0) {
+            denominator *= -1;
+            numerator *= -1;
+        }
     }
     public int getNum() {
         return this.numerator;

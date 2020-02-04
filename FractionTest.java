@@ -1,6 +1,6 @@
 public class FractionTest {
     public static void multTest() {
-        Fraction f = new Fraction(4, 5);
+        Fraction f = new Fraction(-4, -5);
         Fraction f2 = new Fraction(5, 4);
         Fraction f3 = Fraction.multiply(f, f2);
         System.out.println(f3.getNum() + "/" + f3.getDenom());
